@@ -1,0 +1,15 @@
+.icon {
+  color: var(--navy);
+  flex: none;
+}
+
+/* Single blue accent detail per icon (stroked). */
+.accent {
+  stroke: var(--blue);
+}
+
+/* Filled blue accents (dots, marked day). */
+.accentFill {
+  fill: var(--blue);
+  stroke: none;
+}

@@ -1,0 +1,76 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy);
+  background-image: radial-gradient(
+    120% 90% at 50% 25%,
+    #1b2856 0%,
+    var(--navy) 55%,
+    #0e1636 100%
+  );
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  /* Clear the fixed header; add breathing room below so the fold hints at more. */
+  padding-top: calc(var(--header-h) + 48px);
+  padding-bottom: 96px;
+  isolation: isolate;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.col {
+  max-width: 780px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.eyebrowWrap {
+  margin: 0;
+}
+
+.title {
+  color: var(--white);
+  max-width: 15ch;
+}
+
+.sub {
+  color: var(--on-navy);
+  font-size: clamp(1.125rem, 1.05rem + 0.4vw, 1.25rem);
+  line-height: 1.55;
+  max-width: 640px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.roadmapLink {
+  margin-top: 4px;
+}
+
+.sentinel {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 1px;
+  height: 1px;
+}

@@ -1,0 +1,46 @@
+.page {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  background: var(--navy);
+  background-image: radial-gradient(
+    120% 90% at 50% 35%,
+    #1b2856 0%,
+    var(--navy) 55%,
+    #0e1636 100%
+  );
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px var(--gutter);
+  text-align: center;
+}
+
+.logo {
+  position: absolute;
+  top: 24px;
+  left: var(--gutter);
+  z-index: 1;
+}
+
+.col {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.title {
+  color: var(--white);
+}
+
+.body {
+  color: var(--on-navy);
+  font-size: 1.125rem;
+  line-height: 1.55;
+}

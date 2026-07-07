@@ -1,0 +1,172 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  height: var(--header-h);
+  transition:
+    background-color 200ms var(--ease-out),
+    border-color 200ms var(--ease-out),
+    box-shadow 200ms var(--ease-out);
+  border-bottom: 1px solid transparent;
+}
+
+.transparent {
+  background: transparent;
+  border-bottom-color: transparent;
+}
+
+.solid {
+  background: var(--white);
+  border-bottom-color: var(--hairline);
+}
+
+.bar {
+  position: relative;
+  z-index: 2; /* above the mobile overlay so the logo + × stay visible */
+  height: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* -------------------------------------------------------------- desktop nav */
+
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: 32px;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navLink {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--ink);
+  transition: color var(--dur-hover) var(--ease-out);
+}
+.navLink:hover {
+  color: var(--navy);
+}
+
+.transparent .navLink {
+  color: rgba(255, 255, 255, 0.85);
+}
+.transparent .navLink:hover {
+  color: var(--white);
+}
+
+@media (min-width: 900px) {
+  .desktopNav {
+    display: flex;
+  }
+  .hamburger {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------- hamburger */
+
+.hamburger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-right: -8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburgerBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 24px;
+  height: 18px;
+}
+.hamburgerBox span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  background: var(--navy);
+  transition:
+    transform 200ms var(--ease-out),
+    opacity 200ms var(--ease-out),
+    background-color 200ms var(--ease-out);
+}
+.transparent .hamburgerBox span {
+  background: var(--white);
+}
+/* Open state: morph to an X (always over navy overlay, so white). */
+.hamburgerBox[data-open="true"] span {
+  background: var(--white);
+}
+.hamburgerBox[data-open="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburgerBox[data-open="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.hamburgerBox[data-open="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ----------------------------------------------------------------- overlay */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1; /* below .bar (2) so the header row stays visible on top */
+  background: var(--navy);
+  padding: calc(var(--header-h) + 24px) var(--gutter) 40px;
+  display: flex;
+  flex-direction: column;
+}
+.overlay[hidden] {
+  display: none;
+}
+
+.overlayNav {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.overlayList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.overlayLink {
+  display: block;
+  padding: 12px 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.5rem, 1.2rem + 2vw, 1.75rem);
+  letter-spacing: -0.01em;
+  color: var(--white);
+}
+.overlayLink:hover {
+  color: var(--blue);
+}
+
+@media (min-width: 900px) {
+  .overlay {
+    display: none;
+  }
+}

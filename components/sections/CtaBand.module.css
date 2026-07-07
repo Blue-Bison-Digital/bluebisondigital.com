@@ -1,0 +1,48 @@
+.band {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy);
+  background-image: radial-gradient(
+    120% 100% at 50% 30%,
+    #1b2856 0%,
+    var(--navy) 55%,
+    #0e1636 100%
+  );
+  padding-block: clamp(5rem, 3.5rem + 6vw, 8rem);
+  isolation: isolate;
+  color: var(--on-navy);
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.col {
+  max-width: 680px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.title {
+  color: var(--white);
+}
+
+.support {
+  color: var(--on-navy);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  max-width: 560px;
+}
+
+.actions {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}

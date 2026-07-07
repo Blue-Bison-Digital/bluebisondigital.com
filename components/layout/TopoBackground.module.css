@@ -1,0 +1,64 @@
+.wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Intensity: overall presence of the (flat) texture per placement. */
+.full {
+  opacity: 1;
+}
+.faint {
+  opacity: 0.5;
+}
+.hot {
+  opacity: 1;
+}
+/* 404 reads as deep terrain: scale the crop up a touch so loops run larger. */
+.hot .img {
+  transform: scale(1.25);
+  transform-origin: 60% 40%;
+}
+
+/* Hero load sequence: texture fades in from 0 (~800ms). */
+.animateIn {
+  animation: topoIn 800ms var(--ease-out) both;
+}
+@keyframes topoIn {
+  from {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .animateIn {
+    animation: none;
+  }
+}
+
+/* Deferred fade hook (off by default). Fades texture to zero behind centered
+   text via a radial mask on this container. Enable with <TopoBackground fade />. */
+.fade {
+  -webkit-mask-image: radial-gradient(
+    75% 75% at 50% 50%,
+    transparent 0%,
+    transparent 30%,
+    rgba(0, 0, 0, 0.5) 60%,
+    #000 100%
+  );
+  mask-image: radial-gradient(
+    75% 75% at 50% 50%,
+    transparent 0%,
+    transparent 30%,
+    rgba(0, 0, 0, 0.5) 60%,
+    #000 100%
+  );
+}

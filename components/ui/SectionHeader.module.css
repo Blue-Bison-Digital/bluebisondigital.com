@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 720px;
+}
+
+.left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.center {
+  align-items: center;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.title {
+  margin: 0;
+}
+
+.titleDark {
+  color: var(--white);
+}
+
+.support {
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  line-height: 1.55;
+  color: var(--ink);
+  max-width: 60ch;
+}
+
+.supportDark {
+  color: var(--on-navy);
+}

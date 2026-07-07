@@ -1,0 +1,52 @@
+.prose {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.prose p {
+  color: var(--ink);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.principles {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px 56px;
+}
+
+.principle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.principleTitle {
+  color: var(--navy);
+}
+
+.principleBody {
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.55;
+  max-width: 46ch;
+}
+
+.bison {
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bisonBody {
+  color: var(--ink);
+}
+
+@media (min-width: 720px) {
+  .principles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

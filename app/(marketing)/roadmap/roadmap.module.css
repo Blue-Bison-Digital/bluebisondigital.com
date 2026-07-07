@@ -1,0 +1,85 @@
+.deliverables {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px 48px;
+}
+
+.deliverable {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dTitle {
+  color: var(--navy);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.bonusTag {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--blue);
+}
+
+.dBody {
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.55;
+  max-width: 46ch;
+}
+
+/* Fee-credit callout: copy as design, like the homepage pivot line. */
+.callout {
+  margin-block: 64px 0;
+  max-width: 720px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--navy);
+}
+
+/* Non-text use of blue on light (contrast rule): a blue underline accent. */
+.underline {
+  text-decoration: underline;
+  text-decoration-color: var(--blue);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.pricing {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.availability {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--ink);
+  text-align: center;
+}
+
+.secondaryCta {
+  margin-top: 48px;
+  text-align: center;
+}
+
+@media (min-width: 720px) {
+  .deliverables {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .callout {
+    margin-top: 64px;
+  }
+}

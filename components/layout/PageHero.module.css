@@ -1,0 +1,48 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy);
+  background-image: radial-gradient(
+    120% 120% at 50% 20%,
+    #1b2856 0%,
+    var(--navy) 60%,
+    #0e1636 100%
+  );
+  isolation: isolate;
+  padding-top: calc(var(--header-h) + 56px);
+  padding-bottom: 56px;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.col {
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  color: var(--white);
+}
+
+.sub {
+  color: var(--on-navy);
+  font-size: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);
+  line-height: 1.55;
+  max-width: 640px;
+}
+
+.sentinel {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  width: 1px;
+  height: 1px;
+}

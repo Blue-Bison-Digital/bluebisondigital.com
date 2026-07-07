@@ -1,0 +1,44 @@
+.section {
+  position: relative;
+  width: 100%;
+  /* Section vertical padding: 64–80px mobile → 96–128px desktop (4.0). */
+  padding-block: clamp(4rem, 2.5rem + 6vw, 8rem);
+}
+
+/* Content sits above any topo texture. */
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.white {
+  background: var(--white);
+  color: var(--ink);
+}
+
+.pale {
+  background: var(--pale);
+  color: var(--ink);
+}
+
+.dark {
+  background: var(--navy);
+  color: var(--on-navy);
+  /* Subtle radial depth: center lifted, edges darker (dark sections only). */
+  background-image: radial-gradient(
+    120% 90% at 50% 30%,
+    #1a2650 0%,
+    var(--navy) 60%,
+    #0e1636 100%
+  );
+  isolation: isolate;
+}
+
+/* Newsletter-band exception: ~half the vertical weight. */
+.compact {
+  padding-block: clamp(2.5rem, 1.8rem + 3vw, 4rem);
+}
+
+.noPad {
+  padding-block: 0;
+}

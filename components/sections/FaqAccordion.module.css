@@ -1,0 +1,51 @@
+.accordion {
+  max-width: 720px;
+  margin: 48px auto 0;
+  border-top: 1px solid var(--hairline);
+}
+
+.item {
+  border-bottom: 1px solid var(--hairline);
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 0;
+  cursor: pointer;
+  list-style: none;
+}
+/* Remove native disclosure triangle */
+.summary::-webkit-details-marker {
+  display: none;
+}
+
+.question {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.indicator {
+  flex: none;
+  color: var(--navy);
+  display: inline-flex;
+  transition: transform 200ms var(--ease-out);
+}
+/* Plus rotates to × when open. */
+.item[open] .indicator {
+  transform: rotate(45deg);
+}
+
+.answer {
+  padding: 0 0 24px;
+  max-width: 62ch;
+}
+.answer p {
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.6;
+}

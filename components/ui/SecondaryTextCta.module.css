@@ -1,0 +1,28 @@
+.link {
+  display: inline-block;
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.5;
+  transition: color var(--dur-hover) var(--ease-out);
+}
+
+/* Dark surfaces: quiet white, lifts on hover. */
+.dark {
+  color: var(--on-navy-quiet);
+}
+.dark:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Light surfaces: navy text, blue underline appears on hover. */
+.light {
+  color: var(--navy);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition:
+    color var(--dur-hover) var(--ease-out),
+    text-decoration-color var(--dur-hover) var(--ease-out);
+}
+.light:hover {
+  text-decoration-color: var(--blue);
+}

@@ -1,0 +1,75 @@
+.quotes {
+  margin-top: 32px;
+  display: grid;
+  gap: 48px;
+}
+
+.one {
+  max-width: 900px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.two {
+  grid-template-columns: 1fr;
+}
+
+.figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quote {
+  position: relative;
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2rem);
+}
+
+.two .quote {
+  font-size: 1.5rem;
+}
+
+/* Oversized quotation mark behind the first line, blue at 20%. */
+.mark {
+  position: absolute;
+  top: -0.35em;
+  left: -0.15em;
+  font-size: 3.2em;
+  line-height: 1;
+  color: var(--blue);
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.one .caption {
+  align-items: center;
+}
+
+.name {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.role {
+  font-size: 0.9375rem;
+  color: var(--gray);
+}
+
+@media (min-width: 760px) {
+  .two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,82 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.photoWrap {
+  position: relative;
+  max-width: 420px;
+}
+
+/* Slightly cool grade to sit with the palette (PLAN.md 4.2 Founder). */
+.photoWrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-card);
+  background: linear-gradient(
+    155deg,
+    rgba(137, 182, 253, 0.14) 0%,
+    rgba(19, 29, 65, 0.12) 100%
+  );
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: var(--radius-card);
+  filter: saturate(0.97);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  color: var(--navy);
+  margin-top: 4px;
+}
+
+.body {
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.proof {
+  margin-top: 8px;
+}
+
+.link {
+  margin-top: 8px;
+  align-self: flex-start;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--navy);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: text-decoration-color var(--dur-hover) var(--ease-out);
+}
+.link:hover {
+  text-decoration-color: var(--blue);
+}
+
+@media (min-width: 860px) {
+  .grid {
+    grid-template-columns: 5fr 7fr;
+    gap: 64px;
+  }
+  .photoWrap {
+    max-width: none;
+  }
+}

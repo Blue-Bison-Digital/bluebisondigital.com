@@ -1,0 +1,9 @@
+.microcopy {
+  font-size: 0.8125rem; /* 13px */
+  line-height: 1.5;
+  color: var(--gray);
+}
+
+.dark {
+  color: var(--on-navy-quiet);
+}

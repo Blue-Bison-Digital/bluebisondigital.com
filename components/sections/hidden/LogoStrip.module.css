@@ -1,0 +1,43 @@
+.wrap {
+  padding-block: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--gray);
+  text-align: center;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.logo {
+  filter: grayscale(1);
+  opacity: 0.6;
+  transition: opacity var(--dur-hover) var(--ease-out);
+}
+.logo:hover {
+  opacity: 1;
+}
+
+/* Placeholder wordmark styling (stand-in for real logo images). */
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: -0.01em;
+  color: var(--gray);
+}

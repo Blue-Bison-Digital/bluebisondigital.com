@@ -1,0 +1,77 @@
+.card {
+  background: var(--white);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-card);
+  padding: 40px;
+  max-width: 520px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 3rem; /* 48px */
+  line-height: 1;
+  letter-spacing: -0.015em;
+  color: var(--navy);
+}
+
+.caption {
+  margin-top: 8px;
+  font-size: 0.875rem; /* 14px */
+  color: var(--gray);
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--hairline);
+  margin-block: 24px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 12px;
+  align-items: start;
+  font-size: 0.9375rem; /* 15px */
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.bullet {
+  display: flex;
+  align-items: center;
+  height: 22px;
+}
+
+/* Credit line: the closing mechanic — distinguished. */
+.creditItem {
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.button {
+  margin-top: 28px;
+}
+
+.microcopy {
+  margin-top: 12px;
+  font-size: 0.8125rem; /* 13px */
+  line-height: 1.5;
+  color: var(--gray);
+  text-align: center;
+}
+
+.guarantee {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.5;
+  color: var(--gray);
+}
