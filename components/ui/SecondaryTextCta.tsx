@@ -8,8 +8,8 @@ import styles from "./SecondaryTextCta.module.css";
  *   dark  — Inter 14px, white 60%, hover 90% (an afterthought for insiders)
  *   light — navy text, blue underline on hover
  *
- * The copy already ends with an arrow glyph in PLAN.md; we render the label as
- * given and do not inject a second arrow.
+ * Pass the label WITHOUT a trailing arrow — the component renders its own arrow
+ * glyph that nudges right on hover.
  */
 export function SecondaryTextCta({
   href,
@@ -28,16 +28,25 @@ export function SecondaryTextCta({
     .filter(Boolean)
     .join(" ");
 
+  const content = (
+    <>
+      {children}
+      <span className={styles.arrow} aria-hidden="true">
+        &rarr;
+      </span>
+    </>
+  );
+
   if (external) {
     return (
       <a className={classes} href={href} target="_blank" rel="noopener noreferrer">
-        {children}
+        {content}
       </a>
     );
   }
   return (
     <Link className={classes} href={href}>
-      {children}
+      {content}
     </Link>
   );
 }

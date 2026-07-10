@@ -52,7 +52,7 @@ export function Hero() {
               Free 30-minute discovery call. No pitch, no obligation.
             </CtaMicrocopy>
             <SecondaryTextCta href="/roadmap" onDark className={styles.roadmapLink}>
-              Already know you want this? Start with the Automation Roadmap &rarr;
+              Already know you want this? Start with the Automation Roadmap
             </SecondaryTextCta>
           </Reveal>
         </div>

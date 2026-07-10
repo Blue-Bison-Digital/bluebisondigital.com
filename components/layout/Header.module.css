@@ -68,9 +68,19 @@
   .desktopNav {
     display: flex;
   }
-  .hamburger {
-    display: none;
-  }
+}
+
+/* Book-a-call in the transparent hero header: give it more presence than a
+   bare ghost (navy-mid border on navy reads too subtle) without going
+   blue-filled — that would compete with the hero's single blue CTA. */
+header.transparent .navCta {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.55);
+  color: var(--white);
+}
+header.transparent .navCta:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--white);
 }
 
 /* --------------------------------------------------------------- hamburger */
@@ -85,6 +95,14 @@
   background: transparent;
   border: none;
   cursor: pointer;
+}
+
+/* Desktop shows the full nav; the hamburger is mobile-only. (Defined after the
+   base rule so source order wins.) */
+@media (min-width: 900px) {
+  .hamburger {
+    display: none;
+  }
 }
 
 .hamburgerBox {

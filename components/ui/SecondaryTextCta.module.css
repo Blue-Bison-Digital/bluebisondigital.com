@@ -5,6 +5,21 @@
   transition: color var(--dur-hover) var(--ease-out);
 }
 
+/* Arrow nudges right on hover. */
+.arrow {
+  display: inline-block;
+  margin-left: 4px;
+  transition: transform var(--dur-hover) var(--ease-out);
+}
+.link:hover .arrow {
+  transform: translateX(4px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .arrow {
+    transition: none;
+  }
+}
+
 /* Dark surfaces: quiet white, lifts on hover. */
 .dark {
   color: var(--on-navy-quiet);

@@ -54,7 +54,10 @@ export function Founder() {
             />
 
             <Link className={styles.link} href="/about">
-              More about how I work &rarr;
+              More about how I work
+              <span className={styles.arrow} aria-hidden="true">
+                &rarr;
+              </span>
             </Link>
           </Reveal>
         </div>

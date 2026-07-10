@@ -36,7 +36,7 @@
 
   /* Motion */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --dur-hover: 180ms;
+  --dur-hover: 220ms;
 }
 
 @media (min-width: 768px) {

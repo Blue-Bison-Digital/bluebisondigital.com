@@ -71,6 +71,20 @@
   text-decoration-color: var(--blue);
 }
 
+.arrow {
+  display: inline-block;
+  margin-left: 4px;
+  transition: transform var(--dur-hover) var(--ease-out);
+}
+.link:hover .arrow {
+  transform: translateX(4px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .arrow {
+    transition: none;
+  }
+}
+
 @media (min-width: 860px) {
   .grid {
     grid-template-columns: 5fr 7fr;

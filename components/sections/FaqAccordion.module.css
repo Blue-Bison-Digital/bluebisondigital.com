@@ -8,18 +8,22 @@
   border-bottom: 1px solid var(--hairline);
 }
 
+.heading {
+  margin: 0;
+  font: inherit;
+}
+
 .summary {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
   padding: 20px 0;
+  background: none;
+  border: none;
+  text-align: left;
   cursor: pointer;
-  list-style: none;
-}
-/* Remove native disclosure triangle */
-.summary::-webkit-details-marker {
-  display: none;
 }
 
 .question {
@@ -33,19 +37,39 @@
   flex: none;
   color: var(--navy);
   display: inline-flex;
-  transition: transform 200ms var(--ease-out);
+  transition: transform 250ms var(--ease-out);
 }
 /* Plus rotates to × when open. */
-.item[open] .indicator {
+.indicator[data-open="true"] {
   transform: rotate(45deg);
+}
+
+/* Animated collapse: grid rows 0fr -> 1fr slides the answer open smoothly
+   without measuring heights. */
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms var(--ease-out);
+}
+.panel[data-open="true"] {
+  grid-template-rows: 1fr;
+}
+
+.panelInner {
+  overflow: hidden;
 }
 
 .answer {
   padding: 0 0 24px;
   max-width: 62ch;
-}
-.answer p {
   color: var(--ink);
   font-size: 1rem;
   line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel,
+  .indicator {
+    transition: none;
+  }
 }

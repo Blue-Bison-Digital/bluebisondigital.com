@@ -178,7 +178,7 @@ export default function RoadmapPage() {
 
           <div className={styles.secondaryCta}>
             <SecondaryTextCta href={siteConfig.CALENDLY_URL} external>
-              Rather talk it through first? Book the free discovery call &rarr;
+              Rather talk it through first? Book the free discovery call
             </SecondaryTextCta>
           </div>
         </Container>

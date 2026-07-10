@@ -95,6 +95,7 @@ export function Header() {
             external
             variant={onDark ? "secondary" : "primary"}
             surface={onDark ? "dark" : "light"}
+            className={styles.navCta}
           >
             Book a call
           </Button>

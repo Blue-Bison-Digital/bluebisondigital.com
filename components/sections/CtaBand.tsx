@@ -42,7 +42,7 @@ export function CtaBand() {
               automation idea, whether we work together or not.
             </CtaMicrocopy>
             <SecondaryTextCta href="/roadmap" onDark>
-              Already know you want this? Start with the Automation Roadmap &rarr;
+              Already know you want this? Start with the Automation Roadmap
             </SecondaryTextCta>
           </div>
         </Reveal>
