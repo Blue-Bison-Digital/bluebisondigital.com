@@ -31,14 +31,15 @@ export function Founder() {
             </h2>
             <p className={styles.body}>
               I&rsquo;m Jacob McKinney, the founder of Blue Bison Digital.
-              I&rsquo;ve spent 16 years building software and internal systems
-              for small businesses, from local builders and martial-arts gyms to
-              farms and churches, and the same pattern kept showing up: good
-              businesses losing hours every week to work a system should be
-              handling.
+              I&rsquo;ve spent 15 years building software and internal systems
+              for small businesses, from marketing agencies to home-services
+              companies to local attractions, and the same pattern kept showing
+              up: good businesses losing hours every week to work a system
+              should be handling.
             </p>
             <p className={styles.body}>
-              When you hire BBD, I&rsquo;m the one on the call, the one building
+              I&rsquo;m a builder, not a consultant with a slide deck. When you
+              hire BBD, I&rsquo;m the one on the call, the one building
               your automation, and the one you message when something needs to
               change. No handoffs. No junior team you&rsquo;ve never met. One
               person who knows your business and is accountable for the result.

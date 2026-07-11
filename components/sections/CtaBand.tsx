@@ -19,7 +19,7 @@ export function CtaBand() {
       <TopoBackground asset="b" intensity="full" />
       <Container className={styles.inner}>
         <Reveal className={styles.col}>
-          <Eyebrow onDark>Taking on new clients this quarter</Eyebrow>
+          <Eyebrow onDark>Two Roadmap slots a month</Eyebrow>
           <h2 id="cta-title" className={`h2 ${styles.title}`}>
             Find your first automation.
           </h2>

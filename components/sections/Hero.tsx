@@ -29,9 +29,9 @@ export function Hero() {
           </Reveal>
 
           <Reveal as="p" className={styles.sub} delay={140}>
-            Blue Bison Digital builds the automations that handle the work your
-            team shouldn&rsquo;t have to. Missed leads, dropped follow-ups,
-            copy-paste busywork. Set up once. Working every day.
+            Most small teams lose ten or more hours a week to work a machine
+            should do. Blue Bison Digital finds those hours and builds the
+            automations that take them back. Set up once. Working every day.
           </Reveal>
 
           <Reveal className={styles.actions} delay={210}>

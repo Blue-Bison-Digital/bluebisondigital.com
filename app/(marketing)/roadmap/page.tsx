@@ -15,45 +15,44 @@ import styles from "./roadmap.module.css";
 export const metadata: Metadata = {
   title: "The Automation Roadmap",
   description:
-    "A $1,000 working session that maps every automatable hour in your business, installs the first quick win live, and credits in full toward your build.",
+    "A $1,000 Automation Roadmap: every automatable hour in your business mapped and priced within 48 hours, your first automation already running, and the full fee credited toward your build.",
 };
 
 const DELIVERABLES = [
   {
     title: "The assessment call",
-    body: "We go through your business the way a builder would. Where the hours go, which workflows leak time, and what your existing tools could already be doing that nobody has wired up.",
+    body: "A focused call, 30 to 45 minutes. We go through your business the way a builder would: where the hours go, which workflows leak time, and what your existing tools should already be doing that nobody has wired up.",
   },
   {
-    title: "The written roadmap",
-    body: "Quick wins you can do yourself this week. A full map of every automation opportunity we found. A prioritized list of what to build first and why. Specific enough to act on with or without me.",
+    title: "The written roadmap, in 48 hours",
+    body: "Two days later you're holding the plan: every automation opportunity we found, a dollar figure on each one at your real costs, quick wins you can do yourself this week, and a prioritized build order. Specific enough to act on with or without me.",
   },
   {
-    title: "Quick win #1, installed live",
-    body: "The session doesn't end with a plan. It ends with one automation already running in your business. Something works before we hang up.",
+    title: "Quick win #1, already running",
+    body: "The roadmap doesn't arrive alone. By the time we sit down to review it, your first automation is installed and working. You're not looking at a plan. You're looking at results.",
   },
   {
-    title: "A 60-minute AI Operating System session",
-    tag: "Bonus",
-    body: "A one-on-one working session where we set up the AI tools you and your team will actually use day to day. Yours whether or not a build happens.",
+    title: "The walkthrough and your build quote",
+    body: "A 30-minute call to walk the roadmap together: the quick win's first results, what's worth building next, and a fixed price for it. No hourly meters, no maybe-pricing. You decide with the full picture.",
   },
 ];
 
 const STEPS: RouteStep[] = [
   {
     name: "Buy the Roadmap",
-    body: "Pay the $1,000 by card. Within minutes you'll get a confirmation email with a link to schedule your session. That's the whole admin.",
+    body: "Pay the $1,000 by card. Within minutes you get a confirmation email with a short intake form and a link to schedule your call. That's the whole admin.",
   },
   {
-    name: "The session",
-    body: "One call: discovery and workflow mapping. You talk through how the business actually runs; I find where the hours are hiding. Before we end, quick win #1 gets installed and starts working.",
+    name: "The assessment call",
+    body: "Thirty to forty-five minutes, focused, because the intake form already did the busywork. You talk through how the business actually runs. I find where the hours are hiding and pick your first quick win.",
   },
   {
-    name: "The roadmap lands",
-    body: "You get the written report within five business days: quick wins, the full opportunity map, and what to build first.",
+    name: "48 hours later",
+    body: "The roadmap lands and your first automation goes live. Real dollar figures, a prioritized plan, and something already working in your business.",
   },
   {
-    name: "You decide",
-    body: "We do your AI Operating System session, and you choose whether to greenlight a build. If you do, your $1,000 comes off the price. Build slots open in October.",
+    name: "The walkthrough",
+    body: "We go through the roadmap together and you decide. Greenlight a build and your $1,000 comes off the price, and your build gets scheduled on the spot. I take on one or two builds a month, so the plan never sits in a drawer waiting.",
   },
 ];
 
@@ -64,15 +63,15 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "What if I don't hire you for the build?",
-    a: "The roadmap is yours either way, and it's written to be acted on without me. The quick win keeps running. The AI setup session still happens. All you leave behind is the credit.",
+    a: "The roadmap is yours either way, and it's written to be acted on without me. The quick win keeps running. All you leave behind is the credit.",
   },
   {
     q: "When would my build actually happen?",
-    a: "Build slots open in October 2026, and there are only a few. Buying the Roadmap now means your plan is done, your first win is live, and you're at the front of the line when a slot opens.",
+    a: "Builds get scheduled at the walkthrough, and I take on one or two a month. Greenlight yours and it goes on the calendar then and there, usually starting within a few weeks. Your quick win is already running in the meantime.",
   },
   {
     q: "What does the guarantee cover?",
-    a: "If the assessment finds fewer than 10 hours of automatable work in your business, you get a full refund. At five or more employees, I have yet to see a business where that's the outcome. That's why I can offer it.",
+    a: "If the assessment doesn't surface at least $10,000 a year in recoverable time, you get a full refund. At five or more employees, I have yet to see a business come in under that line. That's why I can offer it.",
   },
 ];
 
@@ -81,8 +80,8 @@ export default function RoadmapPage() {
     <>
       <PageHero
         eyebrow="The Automation Roadmap"
-        title="Your first automation, live in one session."
-        subheadline="The Automation Roadmap is a $1,000 working session: every automatable hour in your business mapped, the first quick win installed before we hang up, and the full fee credited toward your build."
+        title="Every hour you're losing, found in 48 hours."
+        subheadline="The Automation Roadmap is $1,000: one short call, then a complete map of every automatable hour in your business with a dollar figure on each. Your first automation is running before we even walk through the plan, and the full fee credits toward your build."
       />
 
       {/* What you get */}
@@ -97,10 +96,7 @@ export default function RoadmapPage() {
           <div className={styles.deliverables}>
             {DELIVERABLES.map((d, i) => (
               <Reveal key={d.title} className={styles.deliverable} delay={(i % 2) * 70}>
-                <h3 className={`h3 ${styles.dTitle}`}>
-                  {d.tag ? <span className={styles.bonusTag}>{d.tag}</span> : null}
-                  {d.title}
-                </h3>
+                <h3 className={`h3 ${styles.dTitle}`}>{d.title}</h3>
                 <p className={styles.dBody}>{d.body}</p>
               </Reveal>
             ))}
@@ -123,7 +119,7 @@ export default function RoadmapPage() {
         leadIn="The Roadmap is priced for businesses where automation moves real money. Here's the line."
         goodItems={[
           "Your business has five or more employees. That's where ten-plus hours of automatable work reliably hides.",
-          "A workflow is clearly costing you: leads, intake, scheduling, paperwork, follow-up.",
+          "Nobody on staff owns the technical side. If you had that person, you'd have done this already. That's the gap I fill.",
           "You've read this site, you're sold on the approach, and you want the plan instead of another call.",
         ]}
         badItems={[
@@ -158,8 +154,8 @@ export default function RoadmapPage() {
           <div className={styles.pricing}>
             <RoadmapPricingCard />
             <p className={styles.availability}>
-              Roadmap slots are open now. Build slots are limited and open in
-              October.
+              Two Roadmap slots and one to two build slots a month. Booked in
+              order.
             </p>
           </div>
         </Container>

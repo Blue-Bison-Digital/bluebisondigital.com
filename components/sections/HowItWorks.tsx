@@ -10,7 +10,7 @@ const STEPS: RouteStep[] = [
   },
   {
     name: "Roadmap",
-    body: "I map the workflow end to end and come back with a plan: what gets automated, what it should save you, and a fixed price. You decide with the full picture in front of you.",
+    body: "I map the workflow end to end and come back within 48 hours with a plan: what gets automated, what it saves you in real dollars, and a fixed price. You decide with the full picture in front of you.",
   },
   {
     name: "Build and test",

@@ -5,9 +5,9 @@ import styles from "./RoadmapPricingCard.module.css";
 
 const INCLUSIONS = [
   "One assessment call: discovery and workflow mapping",
-  "The written roadmap: quick wins, full opportunity map, prioritized recommendations",
-  "Quick win #1 installed live during the session",
-  "A bonus 60-minute AI Operating System session, one-on-one",
+  "The written roadmap, delivered within 48 hours, with every opportunity priced at your real costs",
+  "Quick win #1 installed and running before the walkthrough",
+  "A 30-minute walkthrough call, ending in a fixed-price build quote",
 ];
 
 /**
@@ -63,8 +63,8 @@ export function RoadmapPricingCard() {
       <hr className={styles.divider} />
 
       <p className={styles.guarantee}>
-        The guarantee: if we find fewer than 10 hours of automatable work in your
-        business, you get every dollar back.
+        The guarantee: if the roadmap doesn&rsquo;t find at least $10,000 a year
+        in recoverable time, you get every dollar back.
       </p>
     </div>
   );

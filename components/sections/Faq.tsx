@@ -18,7 +18,7 @@ const ITEMS: FaqItem[] = [
   },
   {
     q: "How long until something is running?",
-    a: "Most first automations launch in weeks, not months. The roadmap gives you a real timeline for your specific build before you commit.",
+    a: "If you start with the Automation Roadmap, your first quick win is live within 48 hours of the assessment call. Bigger builds get a fixed timeline in your roadmap before you commit.",
   },
   {
     q: "What happens if it breaks?",

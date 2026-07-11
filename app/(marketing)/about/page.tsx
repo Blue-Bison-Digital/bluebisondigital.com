@@ -49,13 +49,12 @@ export default function AboutPage() {
               Why BBD exists
             </h2>
             <p>
-              I&rsquo;ve spent 16 years building software and internal systems
-              for small businesses, and plenty of bigger names too, from
-              martial-arts gyms and local farms to museums, government
-              contractors and major publishing houses. Over and over, I watched
-              owners buy tools that promised everything and delivered a login.
-              The software wasn&rsquo;t the problem. Nobody was connecting it to
-              the actual work.
+              I&rsquo;ve spent 15 years building software and internal systems
+              for small businesses, and these days I also build and run a full
+              streaming platform. Over and over, I watched owners buy tools
+              that promised everything and delivered a login. The software
+              wasn&rsquo;t the problem. Nobody was connecting it to the actual
+              work.
             </p>
             <p>
               Blue Bison Digital exists to do that connecting. Find the workflow
