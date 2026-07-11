@@ -15,7 +15,7 @@ import styles from "./roadmap.module.css";
 export const metadata: Metadata = {
   title: "The Automation Roadmap",
   description:
-    "A $1,000 Automation Roadmap: every automatable hour in your business mapped and priced within 48 hours, your first automation already running, and the full fee credited toward your build.",
+    "A $1,000 Automation Roadmap: every automatable hour in your business mapped and priced within 48 hours, your first automation running by the walkthrough, and the full fee credited toward your build.",
 };
 
 const DELIVERABLES = [
@@ -44,11 +44,11 @@ const STEPS: RouteStep[] = [
   },
   {
     name: "The assessment call",
-    body: "Thirty to forty-five minutes, focused, because the intake form already did the busywork. You talk through how the business actually runs. I find where the hours are hiding and pick your first quick win.",
+    body: "Thirty to forty-five minutes, focused, because the intake form already did the busywork. You talk through how the business actually runs. I find where the hours are hiding, pick your first quick win, and we book the walkthrough before we're done.",
   },
   {
     name: "48 hours later",
-    body: "The roadmap lands and your first automation goes live. Real dollar figures, a prioritized plan, and something already working in your business.",
+    body: "The roadmap lands: every opportunity priced at your real costs, in build order. Your quick win gets installed as soon as you grant access, so it's running by the time we talk again.",
   },
   {
     name: "The walkthrough",

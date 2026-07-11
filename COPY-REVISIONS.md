@@ -1,5 +1,7 @@
 # Copy Revisions — 2026-07-11
 
+> **Addendum (later same day, applied directly to components):** the two clocks were being conflated in three spots. The rule: **48 hours belongs to the roadmap document only.** The quick win's public promise anchors to the walkthrough ("running by the time we walk through it"), never to a 48-hour clock — install timing depends on client access. New scheduling beat added: the walkthrough gets booked at the end of the assessment call (2-5 days out). Corrected in place: homepage FAQ "How long until something is running?" (Faq.tsx), roadmap page Steps 2-3 and meta description (roadmap/page.tsx). Sections below reflect pre-addendum text where they conflict; the components are current.
+
 Audit + paste-ready replacement copy, produced after the BBD foundation series locked in the EA wiki (2026-07-09/10): ICP & positioning (`wiki/businesses/bbd-positioning.md`), offer ladder + engagement logistics (`wiki/projects/bbd-ai-automation.md`), brand guide (`wiki/businesses/bbd-brand.md`). PLAN.md is dated July 6 — three days before those locks — so its copy describes the old offer. This doc supersedes PLAN.md §3 and §5 wherever they conflict. Voice rules unchanged: outcomes over technology, plain verbs, no em dashes, short sentences.
 
 ## Verdict: keep the structure
