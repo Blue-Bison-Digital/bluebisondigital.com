@@ -2,15 +2,30 @@
   position: relative;
   overflow: hidden;
   background: var(--navy);
+  /* Depth as a soft top glow that fades to plain navy — no darkened bottom
+     edge, so the band settles to the footer's exact navy at the seam. */
   background-image: radial-gradient(
-    120% 100% at 50% 30%,
-    #1b2856 0%,
-    var(--navy) 55%,
-    #0e1636 100%
+    120% 80% at 50% 4%,
+    #1e2c5c 0%,
+    rgba(30, 44, 92, 0) 62%
   );
   padding-block: clamp(5rem, 3.5rem + 6vw, 8rem);
   isolation: isolate;
   color: var(--on-navy);
+}
+
+/* Melt the texture + tone into flat navy at the bottom so the footer joins
+   seamlessly (this band sits directly above the footer on About). */
+.band::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 180px;
+  background: linear-gradient(to bottom, rgba(19, 29, 65, 0) 0%, var(--navy) 100%);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .inner {
