@@ -12,10 +12,19 @@ export const metadata: Metadata = {
   },
   description:
     "Blue Bison Digital builds AI automations that answer leads, chase follow-ups and handle the busywork for small businesses. Book a free discovery call.",
+  // "./" resolves against metadataBase and the current pathname, so every
+  // route self-canonicalizes to its own apex URL. Without this, the www and
+  // apex copies of a page are identical with no declared preference and
+  // Google files one of them as a duplicate.
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
     type: "website",
     siteName: "Blue Bison Digital",
-    url: siteConfig.url,
+    // Relative, for the same reason as the canonical above: a hardcoded
+    // siteConfig.url made every page share the homepage's og:url.
+    url: "./",
     title: "Blue Bison Digital | AI Automation for Small Business",
     description:
       "AI automations that answer leads, chase follow-ups and handle the busywork for small businesses.",
