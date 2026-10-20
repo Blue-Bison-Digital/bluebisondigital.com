@@ -44,6 +44,19 @@ export const siteConfig = {
   LINKEDIN_URL: "https://www.linkedin.com/in/jacobmc/",
 
   /**
+   * Analytics. Two tools, deliberately, because they answer different
+   * questions: GA4 covers acquisition (channels, and the Google Search Console
+   * link) and PostHog covers behavior (session replay, funnels). At this
+   * traffic volume the replay is the part that actually informs anything.
+   *
+   * The GA4 measurement ID is public, fixed, and identical in every
+   * environment, so it belongs here. PostHog's project key and host are read
+   * from the environment instead so preview and production can point at
+   * different projects: see .env.example.
+   */
+  GA4_MEASUREMENT_ID: "G-C72RKMJ0S5",
+
+  /**
    * Feature flags. Hidden sections and routes ship as real, complete
    * components behind these booleans — never commented-out code. Flip a flag
    * to true when the underlying content (real logos, real case studies, real
