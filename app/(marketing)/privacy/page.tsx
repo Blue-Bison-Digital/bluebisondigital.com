@@ -18,11 +18,19 @@ export const metadata: Metadata = {
 const SECTIONS = [
   {
     heading: "What we collect",
-    body: "Your email address if you subscribe to the newsletter, and standard anonymous analytics about site visits.",
+    body: "Your email address, if you subscribe to the newsletter. Separately, analytics about how the site gets used: which pages you visit, where you arrived from, roughly what part of the world you're in, and what device and browser you're on.",
   },
   {
     heading: "How it's used",
-    body: "The email address is used to send you the newsletter. Nothing else. Analytics are used to understand what content is useful.",
+    body: "The email address is used to send you the newsletter. Nothing else. The analytics tell us which pages are worth keeping and where people get stuck.",
+  },
+  {
+    heading: "Session recording",
+    body: "We record site sessions, which means clicks, scrolling and mouse movement, so we can see where a page is confusing. Form fields are masked before a recording is saved, so what you type into the newsletter signup is not captured. Recordings are visible to us only, and we use them to improve the site.",
+  },
+  {
+    heading: "Tools we use",
+    body: "Google Analytics, for traffic and referral data. PostHog, for on-site behavior and the session recordings above. Kit, for the newsletter. Each one receives only the data described here, and all three set cookies in your browser to do it.",
   },
   {
     heading: "What we never do",
@@ -30,7 +38,7 @@ const SECTIONS = [
   },
   {
     heading: "Your choices",
-    body: "Every email includes an unsubscribe link. Unsubscribing removes you immediately.",
+    body: "Every email includes an unsubscribe link. Unsubscribing removes you immediately. You can also block analytics cookies in your browser settings, or use any standard tracking blocker, and the site will work exactly the same.",
   },
 ];
 

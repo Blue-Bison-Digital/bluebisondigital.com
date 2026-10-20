@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { inter, spaceGrotesk } from "./fonts";
+import { PostHogInit } from "@/components/analytics/PostHogInit";
 import { siteConfig } from "@/site.config";
 import "./globals.css";
 
@@ -51,7 +53,9 @@ export default function RootLayout({
       <body>
         {children}
         <Analytics />
+        <PostHogInit />
       </body>
+      <GoogleAnalytics gaId={siteConfig.GA4_MEASUREMENT_ID} />
     </html>
   );
 }
